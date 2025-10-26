@@ -94,7 +94,7 @@ const truncateText = (text, length) => {
 </script>
 
 <template>
-  <div class="p-4 sm:p-6 lg:p-8">
+  <div class="p-4 sm:p-6 lg:p-8 min-h-screen">
     <!-- Header -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 sm:mb-8 gap-4">
       <div>
