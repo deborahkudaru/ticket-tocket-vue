@@ -1,7 +1,8 @@
 <script setup>
-import { inject, computed } from 'vue'
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useToast } from 'vue-toastification'
+import { useAuthStore } from '../stores/auth'
 
 defineProps({
   onMenuClick: Function
@@ -9,21 +10,20 @@ defineProps({
 
 const router = useRouter()
 const toast = useToast()
-const { logout, session } = inject('auth')
+const auth = useAuthStore()
 
-const userName = computed(() => session.value?.user?.username || session.value?.user?.name || 'User')
-const userEmail = computed(() => session.value?.user?.email || 'Welcome back!')
+const userName = computed(() => auth.session?.user?.username || auth.session?.user?.name || 'User')
+const userEmail = computed(() => auth.session?.user?.email || 'Welcome back!')
 const userInitial = computed(() =>
   userName.value?.charAt(0)?.toUpperCase() || 'U'
 )
 
-const handleLogout = () => {
-  logout()
+const handleLogout = async () => {
+  await auth.logout()
   router.push('/')
   toast.success('Logged out successfully')
 }
 </script>
-
 
 <template>
   <nav class="bg-white shadow-sm border-b border-gray-200">

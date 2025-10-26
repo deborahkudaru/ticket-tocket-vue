@@ -3,14 +3,14 @@ import { ref, onMounted } from 'vue'
 import { TicketAPI } from '../service/api'
 import StatusBadge from '../components/StatusBadge.vue'
 import TicketForm from '../components/TicketForm.vue'
-import toast from 'vue3-toastify'
-import 'vue3-toastify/dist/index.css'
+import { useToast } from 'vue-toastification'
 
 const tickets = ref([])
 const loading = ref(true)
 const editing = ref(null)
 const showForm = ref(false)
 const deleteModal = ref({ show: false, ticket: null })
+const toast = useToast()
 
 // Load all tickets
 const load = async () => {

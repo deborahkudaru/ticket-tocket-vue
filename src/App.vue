@@ -1,11 +1,11 @@
 <script setup>
 import { RouterView } from 'vue-router';
-import Toastification from '@/components/Toastification.vue';
+// import Toastification
 </script>
 
 <template>
   <div>
     <RouterView />
-    <Toastification />
+    <!-- <Toastification /> -->
   </div>
 </template>

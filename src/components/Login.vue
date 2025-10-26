@@ -1,8 +1,8 @@
 <script setup>
 import { reactive, inject } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import { useToast } from "vue-toastification"; // equivalent to react-hot-toast
-import { useAuthStore } from "../../stores/auth";
+import { useToast } from "vue-toastification"; 
+import { useAuthStore } from "../stores/auth";
 
 const auth = useAuthStore();
 
