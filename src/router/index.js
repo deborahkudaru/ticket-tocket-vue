@@ -3,11 +3,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Layout from '../layout/Layout.vue'
 import DashboardLayout from '../layout/DashboardLayout.vue'
 
-import Home from '../pages/Home.vue'
-import Login from '../pages/auth/Login.vue'
-import Signup from '../pages/auth/Signup.vue'
-import Dashboard from '../pages/Dashboard.vue'
-import TicketList from '../pages/TicketList.vue'
+import HomeView from '../views/HomeView.vue'
+import LoginView from '../views/LoginView.vue'
+import SignupView from '../views/SignupView.vue'
+import DashboardView from '../views/DashboardView.vue'
+import TicketView from '../views/TicketView.vue'
 
 import { useAuthStore } from '../stores/auth'
 
@@ -16,18 +16,18 @@ const routes = [
     path: '/',
     component: Layout,
     children: [
-      { path: '', component: Home },
-      { path: 'auth/login', component: Login },
-      { path: 'auth/signup', component: Signup },
+      { path: '', component: HomeView },
+      { path: 'auth/login', component: LoginView },
+      { path: 'auth/signup', component: SignupView },
     ],
   },
   {
     path: '/',
     component: DashboardLayout,
-    meta: { requiresAuth: true }, // ✅ protect everything under this layout
+    meta: { requiresAuth: true }, 
     children: [
-      { path: 'dashboard', component: Dashboard },
-      { path: 'tickets', component: TicketList },
+      { path: 'dashboard', component: DashboardView },
+      { path: 'tickets', component: TicketView },
     ],
   },
   { path: '/:pathMatch(.*)*', component: { template: '<div>404 - Page not found</div>' } },
@@ -38,12 +38,10 @@ export const router = createRouter({
   routes,
 })
 
-// ✅ Global Navigation Guard (checks session for protected routes)
 router.beforeEach((to, from, next) => {
   const auth = useAuthStore()
   const session = JSON.parse(localStorage.getItem('ticketapp_session'))
 
-  // if route requires auth and no session or session expired
   if (to.meta.requiresAuth) {
     if (!session || session.exp <= Date.now()) {
       localStorage.removeItem('ticketapp_session')
