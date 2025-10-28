@@ -1,5 +1,18 @@
-# Vue 3 + Vite
+# TICKET TOCKET
+A ticket managemnet system where you can create, eidt and update your tickets.Built with vue, javascript, and tailwindcss and pinia
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Features
+- Tailwind CSS styling
+- Component-based architecture
+- Responsive UI
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## ⚙️ Setup Instructions
+
+### Clone the repository, enter directory, install dependecies and run locally
+```bash
+git clone https://github.com/deborahkudaru/stage-two.git
+cd stage-two
+npm install
+npm run dev
