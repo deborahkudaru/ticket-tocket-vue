@@ -11,7 +11,6 @@ const props = defineProps({
   onCancel: Function,
 })
 
-// State
 const values = reactive({
   title: props.initial.title || '',
   description: props.initial.description || '',
@@ -33,7 +32,6 @@ const validate = (v) => {
   return e
 }
 
-// Submit
 const submit = () => {
   const errs = validate(values)
   Object.keys(errors).forEach((k) => delete errors[k])
@@ -47,7 +45,6 @@ const submit = () => {
 
 <template>
   <form @submit.prevent="submit" class="space-y-4 sm:space-y-6">
-    <!-- Title -->
     <div>
       <label class="block text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
         Title <span class="text-red-500">*</span>
@@ -64,7 +61,6 @@ const submit = () => {
       </div>
     </div>
 
-    <!-- Status -->
     <div>
       <label class="block text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
         Status <span class="text-red-500">*</span>
@@ -84,7 +80,6 @@ const submit = () => {
       </div>
     </div>
 
-    <!-- Description -->
     <div>
       <label class="block text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
         Description
@@ -103,7 +98,6 @@ const submit = () => {
       </div>
     </div>
 
-    <!-- Buttons -->
     <div class="flex flex-col-reverse sm:flex-row gap-2 sm:gap-3 pt-2 sm:pt-4">
       <button
         v-if="onCancel"

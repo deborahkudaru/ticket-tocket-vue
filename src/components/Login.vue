@@ -55,7 +55,6 @@ const handleSubmit = async () => {
 <template>
   <div class="min-h-screen flex items-center justify-center px-4">
     <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg border border-gray-100">
-      <!-- Session Expired Message -->
       <div
         v-if="msg === 'session_expired'"
         class="text-red-700 px-4 py-3 rounded mb-6 text-center"
@@ -63,14 +62,11 @@ const handleSubmit = async () => {
         Your session has expired.
       </div>
 
-      <!-- Title -->
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">Login</h2>
       </div>
 
-      <!-- Form -->
       <form @submit.prevent="handleSubmit" class="space-y-6" novalidate>
-        <!-- Email -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
           <input
@@ -85,7 +81,6 @@ const handleSubmit = async () => {
           <p v-if="errors.email" class="text-red-600 text-sm mt-2">{{ errors.email }}</p>
         </div>
 
-        <!-- Password -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
           <input
@@ -100,7 +95,6 @@ const handleSubmit = async () => {
           <p v-if="errors.password" class="text-red-600 text-sm mt-2">{{ errors.password }}</p>
         </div>
 
-        <!-- Submit -->
         <button
           type="submit"
           class="w-full bg-slate-600 hover:bg-slate-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200"
@@ -109,7 +103,6 @@ const handleSubmit = async () => {
         </button>
       </form>
 
-      <!-- Signup Link -->
       <div class="mt-6 text-center">
         <p class="text-gray-600">
           Don’t have an account?

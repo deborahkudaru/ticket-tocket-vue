@@ -1,5 +1,3 @@
-// src/service/api.js
-
 const SESSION_KEY = "ticketapp_session";
 const TICKETS_KEY = "ticketapp_tickets";
 const USERS_KEY = "ticketapp_users";

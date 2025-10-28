@@ -77,7 +77,6 @@ const handleSubmit = async () => {
       </div>
 
       <form @submit.prevent="handleSubmit" class="space-y-6" novalidate>
-        <!-- Name -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
           <input
@@ -88,7 +87,6 @@ const handleSubmit = async () => {
           <p v-if="errors.name" class="text-red-600 text-sm mt-2">{{ errors.name }}</p>
         </div>
 
-        <!-- Email -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
           <input
@@ -100,7 +98,6 @@ const handleSubmit = async () => {
           <p v-if="errors.email" class="text-red-600 text-sm mt-2">{{ errors.email }}</p>
         </div>
 
-        <!-- Password -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
           <input
@@ -112,7 +109,6 @@ const handleSubmit = async () => {
           />
           <p v-if="errors.password" class="text-red-600 text-sm mt-2">{{ errors.password }}</p>
 
-          <!-- Real-time password hints -->
           <ul class="text-xs text-gray-600 mt-2 space-y-1">
             <li :class="passwordHints.length ? 'text-green-600' : 'text-gray-400'">
               • At least 6 characters
@@ -132,7 +128,6 @@ const handleSubmit = async () => {
           </ul>
         </div>
 
-        <!-- Confirm Password -->
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
           <input
@@ -144,7 +139,6 @@ const handleSubmit = async () => {
           <p v-if="errors.confirm" class="text-red-600 text-sm mt-2">{{ errors.confirm }}</p>
         </div>
 
-        <!-- Submit Button -->
         <button
           type="submit"
           class="w-full bg-slate-600 hover:bg-slate-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200"
@@ -153,7 +147,6 @@ const handleSubmit = async () => {
         </button>
       </form>
 
-      <!-- Login link -->
       <div class="mt-6 text-center">
         <p class="text-gray-600">
           Already have an account?

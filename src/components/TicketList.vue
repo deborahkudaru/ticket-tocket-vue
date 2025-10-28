@@ -119,12 +119,10 @@ const truncateText = (text, length) => {
       <TicketForm @submit="onCreate" />
     </div>
 
-    <!-- Loading -->
     <div v-if="loading" class="flex justify-center items-center py-12">
       <div class="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-b-2 border-slate-600"></div>
     </div>
 
-    <!-- Ticket List -->
     <div v-else class="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       <div
         v-for="t in tickets"
@@ -160,7 +158,6 @@ const truncateText = (text, length) => {
           <div class="text-xs text-gray-500">ID: {{ t.id }}</div>
         </div>
 
-        <!-- Edit Form -->
         <div
           v-if="editing && editing.id === t.id"
           class="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200"
@@ -177,7 +174,6 @@ const truncateText = (text, length) => {
       </div>
     </div>
 
-    <!-- Empty State -->
     <div
       v-if="!loading && tickets.length === 0 && !showForm"
       class="text-center py-12"
@@ -197,7 +193,6 @@ const truncateText = (text, length) => {
       </button>
     </div>
 
-    <!-- Delete Confirmation Modal -->
     <div
       v-if="deleteModal.show"
       class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"

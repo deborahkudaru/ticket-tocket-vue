@@ -6,7 +6,6 @@ import { createPinia } from 'pinia';
 import Toast from 'vue-toastification'
 import 'vue-toastification/dist/index.css';
 import "primeicons/primeicons.css";
-// import AuthProvider from './context/AuthProvider.vue';
 
 const app = createApp(App)
 

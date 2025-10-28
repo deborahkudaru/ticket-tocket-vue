@@ -32,7 +32,6 @@ onMounted(fetchTickets)
         <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
       </div>
 
-      <!-- Error -->
       <div
         v-if="err"
         class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6 flex justify-between items-center"
@@ -78,7 +77,6 @@ onMounted(fetchTickets)
         </div>
       </div>
 
-      <!-- Tickets -->
       <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
         <div
           class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
