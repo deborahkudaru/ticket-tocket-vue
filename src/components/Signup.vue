@@ -70,7 +70,7 @@ const handleSubmit = async () => {
 
 
 <template>
-  <div class="min-h-screen bg-white flex items-center justify-center px-4">
+  <div class="min-h-screen flex items-center justify-center px-4">
     <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-lg border border-gray-100">
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">Create Account</h2>

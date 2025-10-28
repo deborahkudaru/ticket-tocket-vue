@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="relative min-h-screen overflow-hidden bg-white">
+  <div class="relative min-h-screen overflow-hidden">
     <!-- circles -->
     <div class="absolute top-20 left-10 w-32 h-32 bg-slate-500 rounded-full opacity-70"></div>
     <div class="absolute top-40 right-20 w-48 h-48 bg-slate-400 rounded-full opacity-60"></div>
