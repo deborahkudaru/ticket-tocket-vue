@@ -12,7 +12,7 @@ A ticket managemnet system where you can create, eidt and update your tickets.Bu
 
 ### Clone the repository, enter directory, install dependecies and run locally
 ```bash
-git clone https://github.com/deborahkudaru/stage-two.git
-cd stage-two
+git clone https://github.com/deborahkudaru/ticket-tocket-vue.git
+cd ticket-tocket-vue
 npm install
 npm run dev
